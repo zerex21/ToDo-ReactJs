@@ -1,6 +1,8 @@
+import AddList from "./components/AddList/AddList";
 import List from "./components/List/List";
 
 
+import DB from './assets/db.json'
 
 function App() {
   return (
@@ -26,9 +28,12 @@ function App() {
           color:"blue",
           name:"Фронтенд",
         },
-      ]}/>
+      ]}
+      isRemovable
+      />
+      <AddList colors={DB.colors}/>
     </div>
-
+   
     <div className="todo__tasks">
 
     </div>
