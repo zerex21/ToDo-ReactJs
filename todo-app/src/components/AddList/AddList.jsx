@@ -7,13 +7,29 @@ import List from "../List/List";
 
 import "./AddList.scss";
 
-const AddList = ({ colors }) => {
+const AddList = ({ colors ,onAdd}) => {
+ /*  debugger */
   const [visiblePopup, setVisiblePopup] = useState(false);
   const [selectedColor, selectColor] = useState(colors[0].id);
+  const [inputValue, setInputValue] = useState('');
 
-  console.log(selectedColor);
-  /* setVisiblePopup(visiblePopup) */
-  /* debugger */
+
+  const onClose = () =>{
+    setVisiblePopup(false)
+    setInputValue('')
+    selectColor(colors[0].id)
+  }
+
+  const addList = () =>{
+    if(!inputValue){
+      alert('Введите название списка!')
+      return
+    }
+    const color = colors.filter(c => c.id === selectedColor)[0].name
+    onAdd( {"id": Math.random(), "name": inputValue, "color": color },)
+    onClose()
+  }
+
   return (
     <div className="add-list">
       <List
@@ -52,23 +68,23 @@ const AddList = ({ colors }) => {
       {visiblePopup && (
         <div className="add-list__popup">
           <img
-            onClick={()=>{setVisiblePopup(false)}}
+            onClick={onClose}
             src={closeSvg}
             alt="close"
             className="add-list__popup-close-btn"
           />
-          <input className="field" type="text" placeholder="Название списка" />
+          <input value = {inputValue} onChange={e=>setInputValue(e.target.value)} className="field" type="text" placeholder="Название списка" />
           <div className="add-list__popup-colors">
             {colors.map((color) => (
               <Badge
                 onClick={() => selectColor(color.id)}
                 key={color.id}
                 color={color.name}
-                className={selectedColor === color.id && "active"}
+                className={selectedColor === color.id && 'active'}
               />
             ))}
           </div>
-          <button className="button">Добавить</button>
+          <button onClick={addList} className="button">Добавить</button>
         </div>
       )}
     </div>

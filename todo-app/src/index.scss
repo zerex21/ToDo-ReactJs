@@ -1,60 +1,66 @@
-*{
-    margin: 0 ;
-    padding: 0;
-    list-style: none;
-    outline: none;
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  outline: none;
 }
 
-body{
-    font-family: --apple-system, system-ui, sans-serif;
+body {
+  font-family: --apple-system, system-ui, sans-serif;
 }
 
-.todo{
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    width: 750px;
-    height: 530px;
-    transform: translate(-50%, -50%);
-    box-shadow: 1px 2px 20px #f3f3f3;
-    border-radius: 10px;
-    border: 1px solid #f4f6f8;
+.todo {
+  display: flex;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 750px;
+  /*  height: 530px; */
+  transform: translate(-50%, -50%);
+  box-shadow: 1px 2px 20px #f3f3f3;
+  border-radius: 10px;
+  border: 1px solid #f4f6f8;
 
-    &__sidebar{
-      background-color: #f4f6f8;
-      width: 200px;
-      height: calc(100% - 120px);
-      border-right: 1px solid #f1f1f1;    
-      padding: 60px 20px;
-    }
+  &__sidebar {
+    background-color: #f4f6f8;
+    width: 200px;
+    height: calc(100% - 120px);
+    border-right: 1px solid #f1f1f1;
+    padding: 60px 20px;
+  }
+
+  &__tasks {
+    flex: 1;
+    padding: 60px;
+  }
 }
 
-.button{
-    background: #4DD599;
-    border-radius: 4px;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
+.button {
+  background: #4dd599;
+  border-radius: 4px;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
 
-    &:hover{
-        background: darken(#4DD599,  6%);
-        cursor: pointer;
-    }
+  &:hover {
+    background: darken(#4dd599, 6%);
+    cursor: pointer;
+  }
 
-    &:active{
-        background: darken(#4DD599,  10%);
-    }
+  &:active {
+    background: darken(#4dd599, 10%);
+  }
 }
 
-.field{
-    background: #ffffff;
-    border: 1px solid #efefef;
-    box-sizing: border-box;
-    border-radius: 4px;
-    padding: 8px 12px;
-    width: 100%;
+.field {
+  background: #ffffff;
+  border: 1px solid #efefef;
+  box-sizing: border-box;
+  border-radius: 4px;
+  padding: 8px 12px;
+  width: 100%;
 
-    &:focus{
-        border-color: #dbdbdb;
-    }
+  &:focus {
+    border-color: #dbdbdb;
+  }
 }
