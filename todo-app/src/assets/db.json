@@ -1,6 +1,11 @@
 {
   "lists": [
     {
+      "id": 1,
+      "name": "Продажи",
+      "colorId": 5
+    },
+    {
       "id": 2,
       "name": "Фронтенд",
       "colorId": 4
@@ -91,6 +96,24 @@
       "text": "Сделали удаление и редактирование задач и списков",
       "completed": true,
       "id": 17
+    },
+    {
+      "listId": 2,
+      "text": "1232",
+      "completed": false,
+      "id": 18
+    },
+    {
+      "listId": 1,
+      "text": "123",
+      "completed": false,
+      "id": 19
+    },
+    {
+      "listId": 1,
+      "text": "фывфыв",
+      "completed": false,
+      "id": 20
     }
   ],
   "colors": [

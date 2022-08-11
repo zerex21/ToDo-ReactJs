@@ -44,6 +44,8 @@ const AddList = ({ colors ,onAdd}) => {
         const listObj = { ...data, color: { name: color } };
         onAdd(listObj);
         onClose();
+      }).catch(()=>{
+        alert('Ошибка при добавление списка!')
       })
       .finally(() => {
         setIsLoading(false);
@@ -107,7 +109,6 @@ const AddList = ({ colors ,onAdd}) => {
             ))}
           </div>
           <button onClick={addList} className="button">
-            Добавить
             {isLoading ? 'Добавление...' : 'Добавить'}
             </button>
         </div>
