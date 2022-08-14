@@ -4,17 +4,6 @@
   height: 10px;
   border-radius: 30px;
 
-  &--green {
-    background-color: green;
-  }
-
-  &--blue {
-    background-color: blue;
-  }
-
-  &--pink {
-    background-color: pink;
-  }
   &--grey {
     background-color: #c9d1d3;
   }
@@ -26,11 +15,24 @@
   &--purple {
     background-color: #c355f5;
   }
+
   &--black {
-    background-color: #110133;
+    background-color: #08001a;
   }
 
   &--red {
     background-color: #ff6464;
+  }
+
+  &--green {
+    background-color: #42b883;
+  }
+
+  &--blue {
+    background-color: #64c4ed;
+  }
+
+  &--pink {
+    background-color: #ffbbcc;
   }
 }
